@@ -1,1 +1,5 @@
-<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/fee990f7-688d-4b70-a029-c7198ce1ef61" />
+# Claude Certified Developer – Foundations
+
+![Claude Certified Developer – Foundations Banner](banner.jpg)
+
+> Resources, notes, and preparation material for the Claude Certified Developer – Foundations certification.
