@@ -1,7 +1,9 @@
 
---- QUIZ ---
+### --- QUIZ ---
 
-Topic: 1 MSO Foundations
+---
+
+**Topic: 1 MSO Foundations**
 
 1. A fintech startup runs Claude 3.5 Haiku in zero-shot mode to auto-tag support tickets, and the JSON schema compliance rate sits at 82%, below the 95% target defined in evals. The team is deciding whether to escalate to Sonnet or add worked examples to the Haiku prompt. Which action reflects the evaluation-driven methodology taught in MSO Foundations?
 
@@ -115,7 +117,7 @@ Topic: 1 MSO Foundations
 
 ---
 
-Topic: 2 Production-Grade Prompting, Agents & Tool Use
+**Topic: 2 Production-Grade Prompting, Agents & Tool Use**
 
 1. An agent that queries an internal database tool starts returning multi-megabyte JSON blobs into the conversation, and after 6 turns the session begins hitting `stop_reason: model_context_window_exceeded`. The team wants a fix that doesn't require switching model tiers. What should they implement?
 
@@ -229,7 +231,7 @@ Topic: 2 Production-Grade Prompting, Agents & Tool Use
 
 ---
 
-Topic: 3 Claude Code, MCP & Integration
+**Topic: 3 Claude Code, MCP & Integration**
 
 1. An enterprise wants critical infrastructure directories protected even if an individual developer's machine is switched into `bypassPermissions` mode during a demo. Which control guarantees this protection regardless of local developer settings?
 
@@ -343,7 +345,7 @@ Topic: 3 Claude Code, MCP & Integration
 
 ---
 
-Topic: 4 Production Engineering, Evals & Security
+**Topic: 4 Production Engineering, Evals & Security**
 
 1. An LLM-as-a-judge pipeline is consistently assigning high scores to customer support summaries that omit critical details or hallucinate transaction IDs. What must the team do before trusting this judge in a production gate?
 
@@ -467,7 +469,7 @@ Topic: 4 Production Engineering, Evals & Security
 
 ---
 
-Topic: 5 Accelerators & IP Contribution
+**Topic: 5 Accelerators & IP Contribution**
 
 1. A consulting team wants to package a working banking-support agent as a reusable accelerator for future client engagements. Which practice correctly aligns with Agent Template packaging guidelines?
 
@@ -579,9 +581,11 @@ Topic: 5 Accelerators & IP Contribution
 
 * D) Grant the legacy service elevated privileges so it can self-correct any bad input it receives.
 
---- Answer Key & Explanations ---
+---
 
-Topic: 1 MSO Foundations
+### --- Answer Key & Explanations ---
+
+**Topic: 1 MSO Foundations**
 
 Question 1: A
 Explanation: Best practice is to first try adding targeted worked examples to the cheaper model and re-validate against the eval suite before considering an upgrade to a more expensive tier.
@@ -616,7 +620,9 @@ Explanation: For a single, non-reused, straightforward task, zero-shot prompting
 Question 11: D
 Explanation: Concrete worked examples pin down exact output shape far more reliably than expanding descriptive instructional text alone.
 
-Topic: 2 Production-Grade Prompting, Agents & Tool Use
+---
+
+**Topic: 2 Production-Grade Prompting, Agents & Tool Use**
 
 Question 1: A
 Explanation: Filtering/summarizing large tool outputs at the application layer before reinjecting them into context prevents window exhaustion without requiring a model tier change.
@@ -651,7 +657,9 @@ Explanation: Claude Managed Agents store state server-side, making them currentl
 Question 11: A
 Explanation: Uploading the image once via the Files API (or a stable reference) avoids re-transmitting the full Base64 payload on every turn, cutting network payload size and latency.
 
-Topic: 3 Claude Code, MCP & Integration
+---
+
+**Topic: 3 Claude Code, MCP & Integration**
 
 Question 1: C
 Explanation: Enterprise-level deny rules in `managed-settings.json` deterministically override allow rules and even bypass modes at every configuration tier.
@@ -686,7 +694,9 @@ Explanation: Findings directly verifiable from the diff should be trusted, while
 Question 11: D
 Explanation: Setting `disable-model-invocation: true` in a Skill's frontmatter restricts it to explicit slash-command invocation only, preventing automatic model-triggered execution.
 
-Topic: 4 Production Engineering, Evals & Security
+---
+
+**Topic: 4 Production Engineering, Evals & Security**
 
 Question 1: A
 Explanation: Judge calibration against human-labeled ground truth is required to eliminate scoring bias and drift before an LLM-as-a-judge can be trusted as a production gate.
@@ -724,7 +734,9 @@ Explanation: A fast, low-latency tier fits the capability envelope of simple cla
 Question 12: D
 Explanation: OAuth for user identity, environment variables for service credentials, `PostToolUse` hooks for audit logging, and Enterprise Managed Settings for lock-down together satisfy all four regulatory requirements.
 
-Topic: 5 Accelerators & IP Contribution
+---
+
+**Topic: 5 Accelerators & IP Contribution**
 
 Question 1: A
 Explanation: Proper Agent Template packaging extracts client-specific details into external configuration while keeping the core execution loop and schemas stable and reusable.
@@ -758,3 +770,5 @@ Explanation: A system is only as secure as its most privileged seam; an overly p
 
 Question 11: A
 Explanation: When a seam cannot be programmatically secured, deployment must halt and escalate to a human owner rather than shipping around the unresolved risk.
+
+---
