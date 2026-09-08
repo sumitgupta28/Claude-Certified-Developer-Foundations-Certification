@@ -62,3 +62,6 @@ Resources, notes, and preparation material for the Claude Certified Developer â€
    - [6.0 Comparing Platforms](<./M5 - Accelerators & IP Contribution/6.0 Comparing Platforms.md>)
    - [7.0 Trust Boundaries](<./M5 - Accelerators & IP Contribution/7.0 Trust Boundaries.md>)
    - [8.0 Test Questions](<./M5 - Accelerators & IP Contribution/8.0 Test Questions.md>)
+
+6.0 [Test Collection](./Test.md)  
+   
